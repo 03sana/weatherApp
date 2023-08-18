@@ -1,0 +1,31 @@
+line 23 
+// CHECK IF BROWSER SUPPORTS GEOLOCATION
+
+if('geolocation' in navigator){
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
+}request
+To obtain the user's current location, you can call the getCurrentPosition() method. This initiates an asynchronous  to detect the user's position, and queries the positioning hardware to get up-to-date information. When the position is determined, the defined callback function is executed. You can optionally provide a second callback function to be executed if an error occurs. 
+
+Asynchronicity means that if JavaScript has to wait for an operation to complete, 
+it will execute the rest of the code while waiting.
+
+
+When you call a function like navigator.geolocation.getCurrentPosition(setPosition, showError), you're essentially telling the Geolocation API to do some work for you. In this case, you're asking the API to retrieve the user's position.
+
+The Geolocation API, being a predefined part of the browser, does its thing behind the scenes. Once it successfully determines the user's position, it creates a special object to hold all the relevant information about that position. This object includes properties like coords (latitude, longitude, altitude, etc.) and more.
+
+Now, the magic happens when you define your own function and give it a parameter named position, like function setPosition(position). You're saying, "Hey API, when you're done, pass me that special object you created." So, the Geolocation API fills in that position parameter with the object it created, and now you can use dot notation (like position.coords.latitude) to access the properties of that object.
+
+In other words, by defining your function with a specific parameter name, you're setting up a way to receive the data that the Geolocation API generates. It's a way for your code and the browser's built-in functionality to communicate and exchange information. This parameter acts like a channel through which the API hands you the position object it generated.
+
+
+
+notificationElement.innerHTML = `<p> ${error.message} </p>`;
+Inside the showError function, the error message is accessed using error.message. Here's how it works:
+
+When an error occurs during the geolocation process, the Geolocation API creates an error object and passes it to the showError function.
+This error object contains various properties that provide information about the error, including a message property that holds a human-readable description of the error.
+By using error.message, you're accessing the error message specifically. This message provides details about why the geolocation service failed.
+The template string `<p> ${error.message} </p>` is used to create an HTML paragraph element (<p>) containing the error message. This paragraph element is then inserted into the notificationElement on the webpage.
+
+So, error.message is a way to access and display the error message provided by the Geolocation API to inform the user about what went wrong when trying to determine their location.
