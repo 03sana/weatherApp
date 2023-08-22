@@ -3,12 +3,13 @@
 }
 
 body{
-    background-color: #293251;
+    background:white;
+    background: linear-gradient(to bottom, #3498db, #0d2984);
 }
 
 .container{
-    width: 300px;    
-    background-color: #FFF;
+    width:100%;
+   
     
     display: block;
     margin: 0 auto;
@@ -18,7 +19,7 @@ body{
 }
 
 .app-title{
-    width: 300px;
+    width: 100%;
     height: 50px;
     border-radius: 10px 10px 0 0;
 }
@@ -28,7 +29,7 @@ body{
     padding: 15px;
     margin: 0 auto;
     font-size: 1.2em;
-    color: #293251;
+    color: #f6f7fa;
 }
 
 .notification{
@@ -45,14 +46,14 @@ body{
 }
 
 .weather-container{
-    width: 300px;
+    width: 100%;
     height: 260px;
-    background-color: #F4F9FF;
+    margin-top: 20px;
+
 }
 
 .weather-icon{
-    width: 300px;
-    height: 128px;
+
 }
 
 .weather-icon img{
@@ -61,14 +62,14 @@ body{
 }
 
 .temperature-value{
-    width: 300px;
-    height:60px;
+    width: 100%;
+ 
 }
 
 .temperature-value p{
     padding: 0;
     margin: 0;
-    color: #293251;
+    color: #f9f9fb;
     font-size: 4em;
     text-align: center;
     cursor: pointer;
@@ -79,7 +80,7 @@ body{
 }
 
 .temperature-value span{
-    color: #293251;
+    color: #f7f7f8;
     font-size: 0.5em;
 }
 
@@ -90,7 +91,7 @@ body{
 .temperature-description p{
     padding: 8px;
     margin: 0;
-    color: #293251;
+    color: #f0f1f4;
     text-align: center;
     font-size: 1.2em;
 }
@@ -102,10 +103,109 @@ body{
 .location p{
     margin: 0;
     padding: 0;
-    color: #293251;
+    color: #eff0f3;
     text-align: center;
     font-size: 0.8em;
 }
 
 
 
+
+.form{
+    background: #80808029;
+    color: #555;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+.searchTerm{
+    background: #80808000;
+    border-style: none;
+    padding: 10px;
+    width: 50%;
+}
+
+
+
+
+.search-button{
+
+    margin: auto;
+    /* margin: 0; */
+    width: 250px;
+    border-radius: 50px;
+    padding: 10px;
+    display: flex;
+    background: #f6f1f159;
+    align-items: center;
+    justify-content: space-evenly;
+  
+}
+
+#search-icon{
+    color: white;
+}
+
+
+/*styling the day cards*/
+
+.day-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 120px);
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.day-cards {
+    color: white;
+    border-radius: 12px;
+    background: #ffffff26;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.25rem;
+}
+.day-card-day{
+    font-size: 0.75rem;
+    
+}
+
+#weatherContainer {
+    display: flex;
+
+    gap: 0.5rem;
+ 
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.forecast-item {
+    display: flex;
+    height: 50px;
+    background: #ffffff38;
+    padding: 1.2rem;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    justify-content: space-between;
+}
+
+#weatherContainer img{
+
+    height: 50px;
+
+}
+
+.forecastTitle{
+    color: white;
+    margin-top: 50px;
+}
+
+.current-day{
+    color: white;
+    text-align: center;
+}
