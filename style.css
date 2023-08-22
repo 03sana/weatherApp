@@ -209,3 +209,8 @@ body{
     color: white;
     text-align: center;
 }
+
+input::placeholder { 
+    color: white;
+
+  }
